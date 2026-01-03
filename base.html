@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Portfolio — Muhammad Omar Nadiv</title>
+    <meta
+      property="og:description"
+      content="Backend-focused software engineer with frontend experience. Informatics student at Telkom University."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nadiv.id/" />
+    <meta
+      name="description"
+      content="Backend-focused software engineer with frontend experience. Informatics student at Telkom University."
+    />
+    <meta
+      property="og:title"
+      content="Muhammad Omar Nadiv | Software Engineer"
+    />
+    <meta property="og:image" content="https://link-foto-profil-lu.jpg" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Nadiv | Software Engineer" />
+  </head>
+  <body data-theme="dark">
+    <div class="bg-mesh">
+      <div class="mesh-ball ball-1"></div>
+      <div class="mesh-ball ball-2"></div>
+      <div class="mesh-ball ball-3"></div>
+    </div>
+
+    <header id="main-header">
+      <nav>
+        <a href="#" class="nav-brand">NADIV</a>
+        <div class="nav-links">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <button class="theme-toggle" id="theme-btn">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="mailto:nadiv@telkom.id" class="nav-cta">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="reveal active">
+            <div class="profile-container">
+              <img src="img/profile.jpg" alt="Nadiv Profile" class="profile-img" />
+            </div>
+            <div class="hero-badge">Backend Development</div>
+            <h1>Software Engineer</h1>
+            <p>
+              Informatics student at Telkom University, focused on building
+              backend systems with frontend experience.
+            </p>
+
+            <a href="#work" class="contact-btn">Explore Projects ↓</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="container">
+        <span class="section-label">Featured Projects</span>
+        <div class="work-grid">
+          <a href="https://yomudachamps.com" class="work-card reveal">
+            <div
+              class="work-img"
+              style="
+                background-image: url('img/yomuda.png');
+              "
+            ></div>
+            <div class="work-info">
+              <h3>Yomuda Championship</h3>
+              <p>
+                Tournament website for Yomuda Championship with automated payment integration via a payment gateway.
+              </p>
+              <div class="work-tags">
+                <span>Laravel 11</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://spemsoflash.com" class="work-card reveal">
+            <div
+              class="work-img"
+              style="
+                background-image: url('img/spemso.png');
+              "
+            ></div>
+            <div class="work-info">
+              <h3>SpemsoFlash</h3>
+              <p>
+                Web-based school administrative system with integrated payment gateway support.
+              </p>
+              <div class="work-tags">
+                <span>Laravel 11</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+              </div>
+            </div>
+          </a>
+      </section>
+
+      <section id="about" class="container" style="padding-bottom: 5rem">
+        <div class="skills-box reveal">
+          <div class="skill-col">
+            <h4>Backend</h4>
+            <ul class="skill-list">
+              <li>Laravel</li>
+              <li>PHP 8.x</li>
+              <li>MySQL</li>
+              <li>RESTful API (Basic)</li>
+            </ul>
+          </div>
+          <div class="skill-col">
+            <h4>Frontend</h4>
+                <ul class="skill-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+                <li>React (Basic)</li>
+                </ul>
+          </div>
+          <div class="skill-col">
+            <h4>Systems</h4>
+            <ul class="skill-list">
+              <li>Git / GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="cta-section container">
+        <h2 class="reveal">Punya proyek menarik?<br />Mari berkolaborasi.</h2>
+
+        <div class="social-links reveal">
+          <a
+            href="https://github.com/omrndv"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="http://linkedin.com/in/muhammadomarnadiv/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:umarnadiv@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      style="
+        padding: 4rem 0;
+        text-align: center;
+        border-top: 1px solid var(--border);
+      "
+    >
+      <p
+        style="
+          color: var(--text-muted);
+          font-size: 0.75rem;
+          letter-spacing: 1px;
+        "
+      >
+        DESIGNED & BUILT BY MUHAMMAD OMAR NADIV © 2026
+      </p>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/a2e0e6ad45.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
