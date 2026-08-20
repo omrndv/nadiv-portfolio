@@ -37,8 +37,12 @@ if (aboutStatement) {
                 }
             });
         } else if (node.nodeType === 1) {
+            if (node.nodeName === 'BR') {
+                aboutStatement.appendChild(document.createElement('br'));
+                return;
+            }
             const wrapper = document.createElement('span');
-            wrapper.style.display = 'inline-block';
+            wrapper.style.display = 'inline';
             wrapper.className = node.className;
             const words = node.textContent.split(' ');
             words.forEach(w => {
