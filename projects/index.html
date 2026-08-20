@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Archive & Experience - Muhammad Omar Nadiv</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <meta name="description" content="A complete archive of web development projects, experiences, and awards by Muhammad Omar Nadiv.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body { background: var(--apple-bg); padding-top: 100px; }
+        .archive-section { max-width: 980px; margin: 0 auto; padding: 40px 20px 100px; }
+        .archive-header { margin-bottom: 60px; }
+        .archive-header h1 { font-family: var(--font-display); font-size: clamp(40px, 6vw, 64px); letter-spacing: -0.04em; margin-bottom: 16px; }
+        .archive-header p { font-size: 18px; color: var(--apple-secondary); max-width: 600px; }
+        
+        .archive-block { margin-bottom: 80px; scroll-margin-top: 120px; }
+        .archive-block h2 { font-size: 24px; font-weight: 600; margin-bottom: 24px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; }
+        
+        .archive-table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .archive-table { width: 100%; border-collapse: collapse; text-align: left; }
+        .archive-table th { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--apple-secondary); padding: 16px; border-bottom: 1px solid rgba(0,0,0,0.1); }
+        .archive-table td { padding: 24px 16px; border-bottom: 1px solid rgba(0,0,0,0.05); font-size: 15px; vertical-align: top; }
+        
+        .archive-year { color: var(--apple-secondary); font-variant-numeric: tabular-nums; }
+        .archive-title { font-weight: 600; font-size: 18px; color: var(--apple-text); margin-bottom: 4px; }
+        .archive-role { font-size: 14px; color: var(--apple-secondary); }
+        .archive-desc { font-size: 14px; color: var(--apple-secondary); margin-top: 8px; line-height: 1.5; max-width: 480px; }
+        
+        .archive-tech { display: flex; flex-wrap: wrap; gap: 8px; }
+        .archive-tech span { font-size: 12px; padding: 4px 10px; background: rgba(0,0,0,0.04); border-radius: 100px; color: var(--apple-secondary); white-space: nowrap; }
+        .archive-link { color: var(--apple-text); font-weight: 500; display: inline-flex; align-items: center; gap: 4px; transition: opacity 0.2s; }
+        .archive-link:hover { opacity: 0.6; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--apple-text); margin-bottom: 40px; transition: opacity 0.2s; text-decoration: none; }
+        .back-btn:hover { opacity: 0.6; }
+        @media (max-width: 800px) {
+            .archive-header h1 { font-size: 32px; }
+            .archive-section { padding: 20px 15px 80px; }
+            .archive-table, .archive-table tbody, .archive-table tr, .archive-table td { display: block; width: 100%; }
+            .archive-table thead { display: none; }
+            .archive-table tr { padding: 24px 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
+            .archive-table td { padding: 0; border: none; margin-bottom: 8px; }
+            .archive-year { font-size: 14px; margin-bottom: 4px; display: inline-block; color: var(--apple-secondary); font-variant-numeric: tabular-nums; }
+            .archive-table td:nth-child(2) { margin-bottom: 16px; }
+            .archive-tech { margin-bottom: 16px; }
+            
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="../" class="nav-brand">Muhammad Omar Nadiv</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#experience">Experience</a>
+                <a href="#organization">Organization</a>
+                <a href="#awards">Awards</a>
+            </div>
+            <a href="../#contact" class="nav-contact">Contact <span>↗</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#organization" class="mobile-link">Organization</a>
+        <a href="#awards" class="mobile-link">Awards</a>
+        <a href="../#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <section class="archive-section">
+        <a href="../" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+            Back to Home
+        </a>
+        <div class="archive-header">
+            <h1>Archive & Experience</h1>
+            <p>A comprehensive history of my projects, work experience, organizational roles, and achievements.</p>
+        </div>
+
+        <!-- PROJECTS & EXPERIENCE -->
+        <div class="archive-block" id="experience">
+            <h2>Projects & Work Experience</h2>
+            <div class="archive-table-wrapper">
+                <table class="archive-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Project / Company</th>
+                            <th>Tech Stack</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="archive-year">2025</td>
+                            <td>
+                                <div class="archive-title">Yomuda Championship</div>
+                                <div class="archive-role">Backend Developer</div>
+                                <div class="archive-desc">Developed the backend system for tournament management integrated with automated payment gateways, handling over 3,500+ teams.</div>
+                            </td>
+                            <td>
+                                <div class="archive-tech">
+                                    <span>Laravel</span><span>PHP</span><span>MySQL</span><span>Payment Gateway</span>
+                                </div>
+                            </td>
+                            <td><a href="https://yomudachamps.com" target="_blank" class="archive-link">yomudachamps.com ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td class="archive-year">2024</td>
+                            <td>
+                                <div class="archive-title">PoseSnap</div>
+                                <div class="archive-role">Frontend Developer</div>
+                                <div class="archive-desc">Developed an interactive web-based photobooth using AI models for real-time facial expression and hand gesture detection directly in the browser.</div>
+                            </td>
+                            <td>
+                                <div class="archive-tech">
+                                    <span>AI</span><span>JavaScript</span><span>TailwindCSS</span>
+                                </div>
+                            </td>
+                            <td><a href="https://omrndv.github.io/posesnap/" target="_blank" class="archive-link">omrndv.github.io ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td class="archive-year">2025</td>
+                            <td>
+                                <div class="archive-title">INFENTRA 2025</div>
+                                <div class="archive-role">Staff IT Team</div>
+                                <div class="archive-desc">Managed the event website for participant registration and operated live streaming systems to ensure a seamless technical experience.</div>
+                            </td>
+                            <td>
+                                <div class="archive-tech">
+                                    <span>Laravel</span><span>Tailwind</span><span>JavaScript</span><span>OBS</span>
+                                </div>
+                            </td>
+                            <td><a href="https://infentra2025.com/" target="_blank" class="archive-link">infentra2025.com ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td class="archive-year">2025</td>
+                            <td>
+                                <div class="archive-title">SpemsoFlash (School System)</div>
+                                <div class="archive-role">Fullstack Developer</div>
+                                <div class="archive-desc">Built a centralized school administration and payment management system integrating gateways to manage daily transactions for 400+ students.</div>
+                            </td>
+                            <td>
+                                <div class="archive-tech">
+                                    <span>Laravel</span><span>PHP</span><span>MySQL</span>
+                                </div>
+                            </td>
+                            <td><a href="https://spemsoflash.com" target="_blank" class="archive-link">spemsoflash.com ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td class="archive-year">2024</td>
+                            <td>
+                                <div class="archive-title">WPI 2025 (Welcome Party Informatics)</div>
+                                <div class="archive-role">Event Management</div>
+                                <div class="archive-desc">Secured external sponsorships, negotiated terms, and managed event operations to ensure successful execution.</div>
+                            </td>
+                            <td>
+                                <div class="archive-tech">
+                                    <span>Sponsorship</span><span>Negotiation</span>
+                                </div>
+                            </td>
+                            <td><span class="archive-link" style="opacity: 0.4;">Offline</span></td>
+                        </tr>
+                        <tr>
+                            <td class="archive-year">2023</td>
+                            <td>
+                                <div class="archive-title">Sipansi Project</div>
+                                <div class="archive-role">Frontend Developer</div>
+                                <div class="archive-desc">Developed a responsive 7+ page frontend interface for a digital student data collection system.</div>
+                            </td>
+                            <td>
+                                <div class="archive-tech">
+                                    <span>Laravel</span><span>Tailwind</span><span>JavaScript</span><span>Bootstrap</span>
+                                </div>
+                            </td>
+                            <td><span class="archive-link" style="opacity: 0.4;">Internal</span></td>
+                        </tr>
+                        <tr>
+                            <td class="archive-year">2023</td>
+                            <td>
+                                <div class="archive-title">School Information System</div>
+                                <div class="archive-role">Fullstack Developer</div>
+                                <div class="archive-desc">Built an academic system featuring attendance, assignment collection, and point tracking modules, processing 300+ daily records.</div>
+                            </td>
+                            <td>
+                                <div class="archive-tech">
+                                    <span>Laravel</span><span>PHP</span><span>MySQL</span>
+                                </div>
+                            </td>
+                            <td><span class="archive-link" style="opacity: 0.4;">Internal</span></td>
+                        </tr>
+                        <tr>
+                            <td class="archive-year">2023</td>
+                            <td>
+                                <div class="archive-title">Esoftdream Indonesia (Internship)</div>
+                                <div class="archive-role">Web Developer Intern</div>
+                                <div class="archive-desc">Developed 3+ web applications based on MVC architecture to fulfill various client requirements.</div>
+                            </td>
+                            <td>
+                                <div class="archive-tech">
+                                    <span>CodeIgniter</span><span>PHP</span><span>MySQL</span>
+                                </div>
+                            </td>
+                            <td><span class="archive-link" style="opacity: 0.4;">Internal</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ORGANIZATION -->
+        <div class="archive-block" id="organization">
+            <h2>Organization</h2>
+            <div class="archive-table-wrapper">
+                <table class="archive-table">
+                    <tbody>
+                        <tr>
+                            <td class="archive-year" style="width: 15%;">2026</td>
+                            <td>
+                                <div class="archive-title">HIPMI Telkom University Purwokerto</div>
+                                <div class="archive-role">Information Technology Staff</div>
+                                <div class="archive-desc">Joined as a member of the IT Division to support the organization's technological needs and digital infrastructure.</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- AWARDS -->
+        <div class="archive-block" id="awards">
+            <h2>Awards & Achievements</h2>
+            <div class="archive-table-wrapper">
+                <table class="archive-table">
+                    <tbody>
+                        <tr>
+                            <td class="archive-year" style="width: 15%;">2025</td>
+                            <td>
+                                <div class="archive-title">4th Place Finalist in Bizznovation</div>
+                                <div class="archive-role">Business and UI/UX Design Competition organized by Pradita University Tangerang.</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="archive-year">2024</td>
+                            <td>
+                                <div class="archive-title">2nd Place UI/UX UNJAYA</div>
+                                <div class="archive-role">UI/UX Design Competition organized by UNJAYA.</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="archive-year">2023</td>
+                            <td>
+                                <div class="archive-title">2nd Place UI/UX Parti</div>
+                                <div class="archive-role">UI/UX Design Competition organized by Universitas Muhammadiyah Surakarta (UMS).</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="apple-footer">
+        <div class="footer-inner">
+            <div class="copyright">Copyright © 2026 Muhammad Omar Nadiv. All rights reserved.</div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

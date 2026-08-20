@@ -1,5 +1,4 @@
 # Personal Portfolio
-
 Personal portfolio website of **Muhammad Omar Nadiv**,  
 a backend-focused software engineer with frontend experience.
 
