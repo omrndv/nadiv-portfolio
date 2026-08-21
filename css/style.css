@@ -428,8 +428,7 @@
             display: flex;
             align-items: center;
             gap: 80px;
-            opacity: 0;
-            transform: translateY(60px);
+            
             position: relative;
         }
         .showcase-number {
