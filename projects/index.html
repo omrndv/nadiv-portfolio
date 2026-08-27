@@ -224,9 +224,15 @@
         /* 2. GRID / SHOTS VIEW STYLES */
         .shots-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 28px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
             margin-bottom: 80px;
+        }
+        @media (max-width: 960px) {
+            .shots-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        }
+        @media (max-width: 640px) {
+            .shots-grid { grid-template-columns: 1fr; gap: 20px; }
         }
         .shot-card {
             background: #FFFFFF;
@@ -511,7 +517,7 @@
                                         <span>Laravel</span><span>PHP</span><span>MySQL</span><span>TailwindCSS</span>
                                     </div>
                                 </td>
-                                <td><a href="https://spemsoflash.com" target="_blank" class="archive-link">spemsoflash.com ↗</a></td>
+                                <td><a href="https://spemso-flash.com" target="_blank" class="archive-link">spemso-flash.com ↗</a></td>
                             </tr>
                             <!-- WPI -->
                             <tr class="project-row" data-category="client">
@@ -628,7 +634,7 @@
                      data-badge="Client Project" data-img="../img/spemso.webp"
                      data-desc="Built a centralized school administration and student payment management platform for SMP Muhammadiyah 1 Purwokerto, integrating payment gateways to handle daily financial transactions for 400+ active students."
                      data-tags="Laravel,PHP,MySQL,Payment Gateway,TailwindCSS"
-                     data-live="https://spemsoflash.com"
+                     data-live="https://spemso-flash.com"
                      data-wa="Halo Nadiv, saya tertarik buat sistem informasi sekolah mirip SpemsoFlash.">
                     <div class="shot-thumbnail">
                         <img src="../img/spemso.webp" alt="SpemsoFlash" loading="lazy">
