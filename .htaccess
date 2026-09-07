@@ -1,0 +1,55 @@
+# ==============================================================================
+# HARDENED SECURITY HEADERS & SERVER CONFIGURATION FOR HOSTINGER / APACHE
+# Domain: nadivspace.id
+# ==============================================================================
+
+# 1. PREVENT DIRECTORY BROWSING / INDEXING
+Options -Indexes
+
+# 2. BLOCK ACCESS TO SENSITIVE & HIDDEN FILES
+<FilesMatch "(^\.|\.(env|git|sql|sqlite|db|bak|config|log|ini|sh|yaml|yml|md|pdf)$)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Allow public access to legitimate files if needed
+<Files "robots.txt">
+    Allow from all
+</Files>
+<Files "sitemap.xml">
+    Allow from all
+</Files>
+<Files "CV_Muhammad_Omar_Nadiv.pdf">
+    Allow from all
+</Files>
+
+# 3. ENFORCE PRODUCTION SECURITY HEADERS
+<IfModule mod_headers.c>
+    # HTTP Strict Transport Security (HSTS) - 1 Year + Preload
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+
+    # Prevent Clickjacking
+    Header always set X-Frame-Options "DENY"
+
+    # Prevent MIME-type Sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Restrict Browser APIs & Features
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+    # Cross-Site Scripting (XSS) Filter legacy protection
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Content Security Policy (CSP) - Allowing Google Fonts & CDNJS
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none';"
+</IfModule>
+
+# 4. FORCE HTTPS REDIRECT
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
