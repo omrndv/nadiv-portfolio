@@ -12,7 +12,7 @@ Options -Indexes
     Deny from all
 </FilesMatch>
 
-# Allow public access to legitimate files if needed
+# Allow public access to legitimate files
 <Files "robots.txt">
     Allow from all
 </Files>
@@ -23,9 +23,9 @@ Options -Indexes
     Allow from all
 </Files>
 
-# 3. ENFORCE PRODUCTION SECURITY HEADERS
+# 3. ENFORCE PRODUCTION SECURITY HEADERS (STRICT CSP & HARDENING)
 <IfModule mod_headers.c>
-    # HTTP Strict Transport Security (HSTS) - 1 Year + Preload
+    # HTTP Strict Transport Security (HSTS) - 1 Year + Subdomains + Preload
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
 
     # Prevent Clickjacking
@@ -37,14 +37,19 @@ Options -Indexes
     # Referrer Policy
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
-    # Restrict Browser APIs & Features
-    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
-
-    # Cross-Site Scripting (XSS) Filter legacy protection
+    # Cross-Site Scripting Filter Protection
     Header always set X-XSS-Protection "1; mode=block"
 
-    # Content Security Policy (CSP) - Allowing Google Fonts & CDNJS
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none';"
+    # Restrict Browser Hardware & Privacy APIs
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+
+    # Strict Content Security Policy (CSP) with object-src 'none', frame-ancestors 'none', base-uri 'self'
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;"
+    
+    # Cache Control for security
+    <FilesMatch "\.(html|php)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
 </IfModule>
 
 # 4. FORCE HTTPS REDIRECT
